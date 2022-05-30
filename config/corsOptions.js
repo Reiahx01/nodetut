@@ -1,9 +1,6 @@
-// Cross Origin Resource Handling
-const whitelist = [
-    'https://www.yoursite.com', 
-    'http://localhost:4000', 
-    'https://www.google.com']
+const allowedOrigins = require('./allowedOrigins')
 
+// Cross Origin Resource Handling
 const corsOptions = {
     origin: (origin, callback) => {
         if(whitelist.indexOf(origin) !== -1 || !origin) { //remove after dev work
